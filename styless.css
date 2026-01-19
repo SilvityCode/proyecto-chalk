@@ -39,14 +39,15 @@
 }
 
 .viajes-logo img {
-  height: 200px; 
+  height: 200px;
   width: auto;
-  border-radius: 8px; 
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.viajes-logo:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px;
+.viajes-logo:hover img {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 }
 
 
@@ -92,9 +93,9 @@
 }
 
 .viaje-button:hover {
-  background-color: var(--color-rosa-suave);
+  background-color: var(--color-azul);
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(255, 164, 164, 0.7);
+  box-shadow: 0 6px 18px var(--color-crema);
 }
 
 /* === Elementos decorativos suaves === */
@@ -131,7 +132,7 @@
     font-size: 1.1rem;
   }
   .viajes-logo img {
-    height: 40px;
+    height: 100px;
   }
   .site-header {
     padding: 1rem;
