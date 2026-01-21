@@ -8,18 +8,19 @@
 
 /* === Estilos generales de la seccion hero === */
 .hero {
-  background: linear-gradient(135deg, var(--color-crema) 0%, var(--color-azul) 100%);
+  background: 
+  linear-gradient(135deg, rgba(252, 249, 234, 0.85) 0%, rgba(173, 191, 251, 0.85) 100%),
+  url('img/hero.jpg') no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
   position: relative;
   overflow: hidden;
 }
 
-/* === Header === */
 .site-header {
   position: absolute;
   top: 0;
@@ -38,18 +39,6 @@
   width: 100%;
 }
 
-.viajes-logo img {
-  height: 200px;
-  width: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.viajes-logo:hover img {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
-}
-
 
 /* === Contenido principal de la seccion hero (texto y botón) === */
 .hero-text {
@@ -62,6 +51,12 @@
   backdrop-filter: blur(6px); /* efecto vidrio moderno (opcional) */
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
+
+.hero-text:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 .hero-text h1 {
   font-family: 'Poppins', sans-serif;
@@ -96,45 +91,4 @@
   background-color: var(--color-azul);
   transform: translateY(-3px);
   box-shadow: 0 6px 18px var(--color-crema);
-}
-
-/* === Elementos decorativos suaves === */
-.hero::before,
-.hero::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background: var(--color-rosa-suave);
-  opacity: 0.15;
-  z-index: 1;
-}
-
-.hero::before {
-  width: 400px;
-  height: 400px;
-  top: -150px;
-  left: -150px;
-}
-
-.hero::after {
-  width: 300px;
-  height: 300px;
-  bottom: -100px;
-  right: -100px;
-}
-
-/* === Para pantallas mas pequeñas: modelo responsivo === */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-  .viajes-logo img {
-    height: 100px;
-  }
-  .site-header {
-    padding: 1rem;
-  }
 }
