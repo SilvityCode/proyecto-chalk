@@ -89,6 +89,7 @@
 
 .viaje-button:hover {
   background-color: var(--color-azul);
+  color: black;
   transform: translateY(-3px);
   box-shadow: 0 6px 18px var(--color-crema);
 }
